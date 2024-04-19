@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <NavBar active="dashboard" />
-      <h1>Dashboard</h1>
+      <h1 style={{ color: 'black' }}>Dashboard</h1>
     </main>
   );
 }

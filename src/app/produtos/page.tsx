@@ -11,7 +11,7 @@ import { getProdutos } from '../actions/produtos/getProdutos';
 interface Produto {
 id: number,
 nome: string,
-descrição: string,
+descricao: string,
 icone: string
 }
 
@@ -31,7 +31,16 @@ return (
     <main className="flex min-h-screen flex-col items-center">
     <NavBar active="produtos" />
 
-    <section className="flex flex-col gap-2 bg-slate-800 min-w-[600px] mt-4 p-2 rounded">
+    <section className="itensCadastradados" style={{
+                    width: '700px',
+                    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+                    borderRadius: '35px',
+                    backgroundColor: 'white',
+                    display: 'inline-block',
+                    color: 'black',
+                    padding: '30px',
+                    marginBottom: '100px',
+                }}>
         <div className="flex justify-between">
         <h2 className="text-2xl font-bold">Itens Cadastrados</h2>
         <Link href="/produtos/new">

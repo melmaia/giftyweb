@@ -19,8 +19,20 @@ export default function CadastrarProduto(){
         <main className="flex min-h-screen flex-col items-center">
             <NavBar active="produtos" />
 
-            <form action={formAction} className="flex flex-col gap-3 m-6 bg-slate-900 rounded p-6 min-w-[500px]">
-                <h2 className="text-2xl font-bold">Novo Item</h2>
+            <form action={formAction} style={{
+                    width: '700px',
+                    height: '270px',
+                    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+                    borderRadius: '35px',
+                    backgroundColor: 'white',
+                    display: 'inline-block',
+                    color: 'black',
+                    padding: '30px',
+                    marginBottom: '100px',
+                }}>
+                    <h2 className="text-2xl font-bold">Novo Item</h2>
+                
+
                 <Input
                     key="nome"
                     label="Nome"
@@ -28,11 +40,12 @@ export default function CadastrarProduto(){
                     labelPlacement="outside"
                     isInvalid={state?.message !== ''}
                     errorMessage={state?.message}
+                    
                 />
                 <Input
-                    key="descrição"
-                    label="Descrição"
-                    name="descrição"
+                    key="descricao"
+                    label="Descricao"
+                    name="descricao"
                     labelPlacement="outside"
                     isInvalid={state?.message !== ''}
                     errorMessage={state?.message}
@@ -40,7 +53,7 @@ export default function CadastrarProduto(){
     
                 <div className="flex justify-around mt-4">
                     <Link href="/produtos">
-                        <Button variant="bordered" >Cancelar</Button>
+                        <Button>Cancelar</Button>
                     </Link>
                     <SubmitButton></SubmitButton>
                 </div>

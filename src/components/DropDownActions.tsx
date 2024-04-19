@@ -19,13 +19,17 @@ export default function DropDownActions({onDelete}: DropDownActionsProps) {
     <Dropdown>
       <DropdownTrigger>
         <Button
-          variant="light"
+          style={{
+            width: '20px',
+            height: '20px',
+            marginTop: '10px',
+            marginBottom: '40px'}}
         >
           <ChevronDown/>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
-        <DropdownItem key="edit" startContent={<Pencil />} >editar</DropdownItem>
+        {/*<DropdownItem key="edit" startContent={<Pencil />} >editar</DropdownItem>*/}
         <DropdownItem onClick={onDelete} startContent={<Trash />} key="delete" className="text-danger" color="danger">
           apagar
         </DropdownItem>

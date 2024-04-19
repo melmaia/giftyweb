@@ -2,7 +2,6 @@
 
 import DropDownActions from "@/components/DropDownActions";
 import { Icone } from "@/components/Icone";
-import { create } from "../actions/produtos/create";
 import { toast } from "react-hot-toast";
 import { destroy } from "../actions/produtos/destroy";
 
@@ -12,7 +11,7 @@ interface ProdutoItemProps{
     produto : {
         id: number,
         nome: string,
-        descrição: string
+        descricao: string
         icone: string
     }
 }
@@ -34,7 +33,7 @@ function ProdutoItem({ produto } : ProdutoItemProps) {
             <div>
                 <Icone nome={produto.icone}></Icone>
                 <span>{produto.nome}</span>
-                <span>{produto.descrição}</span>
+                <span>{produto.descricao}</span>
             </div>
             <DropDownActions onDelete ={handleDelete} />
 

@@ -34,10 +34,10 @@ export function EditForm(produto: Produto) {
             />
 
             <Input
-                key="descrição"
-                label="descrição"
-                name="descrição"
-                defaultValue={produto.descrição}
+                key="descricao"
+                label="descricao"
+                name="descricao"
+                defaultValue={produto.descricao}
                 variant="bordered"
                 labelPlacement={"outside"}
                 isInvalid={state?.message != ''}
